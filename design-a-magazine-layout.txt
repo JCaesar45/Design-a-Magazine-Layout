@@ -1,0 +1,92 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Magazine Cover</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="magazine-cover">
+    <header class="title">Urban Pulse</header>
+    <section class="feature-article">Inside City Culture</section>
+    <section class="small-article1">Top Street Eats</section>
+    <section class="small-article2">Art in Motion</section>
+    <section class="cover-image">[Cover Image Here]</section>
+  </main>
+</body>
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f0f0;
+}
+
+.magazine-cover {
+  display: grid;
+  grid-template-areas:
+    "title title title"
+    "feature-article feature-article cover-image"
+    "small-article1 small-article2 cover-image";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr 1fr;
+  gap: 10px;
+  width: 90vw;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  grid-area: title;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #333;
+  background-color: #eaeaea;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.feature-article {
+  grid-area: feature-article;
+  background-color: #cde;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.small-article1 {
+  grid-area: small-article1;
+  background-color: #f9d;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.small-article2 {
+  grid-area: small-article2;
+  background-color: #d9f;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.cover-image {
+  grid-area: cover-image;
+  background-color: #bbb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+
+** end of styles.css **
+
